@@ -1,1 +1,17 @@
-<p>textdavinciedit001 works!</p>
+<div>
+    <Head>
+        <title>OpenAI Quickstart</title>
+=    </Head>
+
+    <main className=main>
+        <h3>Edit text</h3>
+        <form>
+            <input type="text" name="input" placeholder="Enter some text to correct" [(ngModel)]="input"/>
+            <input type="text" name="instruction" placeholder="What should I do?" [(ngModel)]="instruction" />
+            <input type="button" value="Generate correction" (click)="postCompletition()" />
+        </form>
+        <div className=result>
+            {{result}}
+        </div>
+    </main>
+</div>
