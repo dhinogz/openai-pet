@@ -1,1 +1,18 @@
-<p>imagesgeneration works!</p>
+<div>
+    <Head>
+      <title>OpenAI Quickstart</title>
+    </Head>
+  
+    <main className=main>
+      <h3>Generate an image</h3>
+      <form>
+        <input type="text" name="generation" placeholder="Enter a prompt for an image to be generated" [(ngModel)]="prompt"/>
+        <input type="button" value="Generate image" (click)="postCompletion()"/>
+      </form>
+      <div className=result>
+        <div *ngIf="!image">Loading...</div>
+        <img *ngIf="image" [src]="image" alt="Generated Image" width="512" height="512">
+      </div>
+    </main>
+  </div>
+  
