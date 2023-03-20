@@ -9,7 +9,10 @@ import { ModerationsComponent } from './moderations/moderations.component';
 import { ImagesgenerationComponent } from './imagesgeneration/imagesgeneration.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Textdavinci003Service } from './textdavinci003.service';
+import { Textdavinci003Service } from './services/textdavinci003.service';
+import { Textdavinciedit001Service } from './services/textdavinciedit001.service';
+import { ModerationsService } from './services/moderations.service';
+import { ImagesgenerationService } from './services/imagesgeneration.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,12 @@ import { Textdavinci003Service } from './textdavinci003.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [Textdavinci003Service],
+  providers: [
+    Textdavinci003Service, 
+    Textdavinciedit001Service,
+    ModerationsService,
+    ImagesgenerationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
