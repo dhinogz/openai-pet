@@ -1,1 +1,20 @@
-<p>moderations works!</p>
+<div>
+    <Head>
+        <title>OpenAI Quickstart</title>
+    </Head>
+
+    <main className=main>
+        <h3>Moderations</h3>
+        <form>
+            <input type="text" name="input" placeholder="Enter text you'd like to check" [(ngModel)]="input"/>
+            <input type="button" value="Input text to classify" (click)="postCompletion()"/>
+        </form>
+        <div className=result>
+            <ul>
+                <li *ngFor="let category of result | keyvalue">
+                  <span *ngIf="category.value">{{ category.key }}</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
